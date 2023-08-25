@@ -6,51 +6,47 @@
 	<title>Document</title>
 </head>
 <body>
-	<form action="post" method="post">
-      <div>
-       <label for="name">Name</label>
-	   <input type="name" id="name" required placeholder="Name">
-	</div>
+	<h1>Signup Form</h1>
+	<form action="submit.php" method="post">
+		<label for="name">Name</label>
+		<input type="text" required id="name" name="name" placeholder="Name">
 
-	<div>
-		<label for="email">Emain</label>
-		<input type="email" id="email" required placeholder="email">
-	 </div>
-	 <div>
-		<label for="gender">Gender</label>
-		<input type="radio" id="gender_m,gender_f" required>
-	 </div>
-	 <div>
+		<label for="email">Email</label>
+		<input type="email" required id="email" name="email" placeholder="Email">
+
+		<label>Gender</label>
+		<input type="radio" required id="gender_m" name="gender" value="Male">
+		<label for="gender_m">Male</label>
+		<input type="radio" required id="gender_f" name="gender" value="Female">
+		<label for="gender_f">Female</label>
+
 		<label for="cars">Car Brands</label>
-		<select name="cars" id="cars"><option value="" disabled selected>--Please choose an option--</option>
+		<select required id="cars" name="cars">
+			<option value="" disabled selected>--Please choose an option--</option>
 			<option value="Toyota">Toyota</option>
 			<option value="Honda">Honda</option>
 			<option value="Ford">Ford</option>
-			<option value="Chevrolet">Chevrolet</option></select>
-	 </div>
-	 <div>
-		<label for="Age">Age</label>
-		<input type="number" required placeholder="age">
-	 </div>
-	 <div>
-		<label for="DOB">DOB</label>
+			<option value="Chevrolet">Chevrolet</option>
+		</select>
+
+		<label for="age">Age</label>
+		<input type="number" required id="age" name="age" placeholder="Age">
+
+		<label for="dob">DOB</label>
 		<input type="date" required id="dob" name="dob">
-	 </div>
-	 <div>
-		<label for="tel">Tel</label>
-		<input type="tel" placeholder="xxx-xxx-xxxx">
-	 </div>
-	 <div>
-		<label for="Password">Password</label>
-		<input type="password" required placeholder="Password">
-	 </div>
-	 <div>
+
+		<label for="tel">Phone Number</label>
+		<input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx">
+
+		<label for="password">Password</label>
+		<input type="password" required id="password" name="password" placeholder="Password">
+
 		<label>
 			<input type="checkbox" required id="tos" name="tos">
 			I agree to the TOS
 		</label>
-	 </div>
-	 <button type="submit">Submit</button>
+
+		<button type="submit">Submit</button>
 	</form>
 </body>
 </html>
